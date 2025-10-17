@@ -13,7 +13,6 @@ namespace Tyuiu.MuliavinIM.Sprint2.Task0.V26.Lib
             res[3] = x > y;
             res[4] = x <= y + 70;
             res[5] = x >= y;
-
             return res;
         }
     }
