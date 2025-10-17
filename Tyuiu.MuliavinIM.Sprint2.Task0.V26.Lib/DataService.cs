@@ -6,7 +6,7 @@ namespace Tyuiu.MuliavinIM.Sprint2.Task0.V26.Lib
     {
         public bool[] GetCompareOperations(int x, int y)
         {
-            bool[] res = new bool[6];
+            bool[] res = new bool[2];
             res[0] = x == y;
             res[1] = x != y + 70;
             res[2] = x < y;
