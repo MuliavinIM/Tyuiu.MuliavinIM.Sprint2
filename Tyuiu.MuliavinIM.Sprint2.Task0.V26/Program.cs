@@ -2,7 +2,7 @@
 
 internal class Program
 {
-    private static void Main(string[] args)
+    static void Main(string[] args)
     {
         DataService ds = new DataService();
         int x = 1045;
