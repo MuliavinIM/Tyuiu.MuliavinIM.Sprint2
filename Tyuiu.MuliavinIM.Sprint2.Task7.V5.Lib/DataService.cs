@@ -7,11 +7,7 @@ namespace Tyuiu.MuliavinIM.Sprint2.Task7.V5.Lib
         public bool CheckDotInShadedArea(double x, double y)
         {
             bool res;
-
-            if ((x >= -0.7)
-                 && (x <= 0.7)
-                 && (y >= Math.Pow(x, 2))
-                 && (y <= Math.Exp(-Math.Abs(x))))
+            if (((x < 0) && (y >= Math.Pow(x, 2)) && (y <= Math.Pow(Math.E, x))) || ((x > 0) && (y >= Math.Pow(x, 2)) && (y <= Math.Pow(Math.Exp(-x)))))
             {
                 res = true;
             }
@@ -19,7 +15,6 @@ namespace Tyuiu.MuliavinIM.Sprint2.Task7.V5.Lib
             {
                 res = false;
             }
-
             return res;
         }
     }
