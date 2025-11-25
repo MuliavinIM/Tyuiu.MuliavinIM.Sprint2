@@ -3,10 +3,12 @@ namespace Tyuiu.MuliavinIM.Sprint2.Task7.V5.Lib
 {
     public class DataService : ISprint2Task7V5
     {
+
+
         public bool CheckDotInShadedArea(double x, double y)
         {
             bool res;
-            if (((x < 0) && (y >= Math.Pow(x, 2)) && (y <= Math.Pow(Math.E, x))) || ((x > 0) && (y >= Math.Pow(x, 2)) && (y <= Math.Pow(Math.E, -x))))
+            if ((Math.Pow(x, 2) + Math.Pow(y, 2) < -1) && ((x > y) && (x < -1) && (y > 0) && (x < -1)))
             {
                 res = true;
             }
@@ -15,7 +17,6 @@ namespace Tyuiu.MuliavinIM.Sprint2.Task7.V5.Lib
                 res = false;
             }
             return res;
-
         }
     }
 }
