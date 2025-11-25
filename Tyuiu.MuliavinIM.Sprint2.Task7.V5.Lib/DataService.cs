@@ -1,4 +1,5 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint2;
+﻿using System;
+using tyuiu.cources.programming.interfaces.Sprint2;
 
 namespace Tyuiu.MuliavinIM.Sprint2.Task7.V5.Lib
 {
@@ -6,11 +7,11 @@ namespace Tyuiu.MuliavinIM.Sprint2.Task7.V5.Lib
     {
         public bool CheckDotInShadedArea(double x, double y)
         {
-            double bottom = Math.Pow(x, 2);
+            double bottom = x * x;
 
             double top = Math.Exp(-Math.Abs(x));
-
-            return (y >= bottom) && (y <= top);
+            const double eps = 1e-9;
+            return (y + eps >= bottom) && (y <= top + eps);
         }
     }
 }
