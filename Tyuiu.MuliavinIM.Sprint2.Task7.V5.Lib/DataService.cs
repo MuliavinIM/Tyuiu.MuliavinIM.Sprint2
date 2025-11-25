@@ -1,4 +1,5 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint2;
+﻿using System;
+using tyuiu.cources.programming.interfaces.Sprint2;
 
 namespace Tyuiu.MuliavinIM.Sprint2.Task7.V5.Lib
 {
@@ -8,15 +9,14 @@ namespace Tyuiu.MuliavinIM.Sprint2.Task7.V5.Lib
         {
             bool res;
 
-            if (((x < 0) && (y >= Math.Pow(x, 2)) && (y <= Math.Exp(x)))
-              || ((x > 0) && (y >= Math.Pow(x, 2)) && (y <= Math.Exp(-x))))
-            {
+            bool condBottom = y >= Math.Pow(x, 2);
+
+            bool condTop = y <= Math.Exp(-Math.Abs(x));
+
+            if (condBottom && condTop)
                 res = true;
-            }
             else
-            {
                 res = false;
-            }
 
             return res;
         }
