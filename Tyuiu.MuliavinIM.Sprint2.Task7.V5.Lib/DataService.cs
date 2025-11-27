@@ -1,23 +1,26 @@
 ﻿using tyuiu.cources.programming.interfaces.Sprint2;
+
 namespace Tyuiu.MuliavinIM.Sprint2.Task7.V5.Lib
 {
-    public class DataService : ISprint2Task6V4
+    public class DataService : ISprint2Task7V5
     {
-        public string FindCardSuit(int value)
+        public bool CheckDotInShadedArea(double x, double y)
         {
-            switch (value)
+            bool res;
+
+            double lower = x * x;                 
+            double upper = Math.Exp(-Math.Abs(x)); 
+
+            if ((y >= lower) && (y <= upper))
             {
-                case 1:
-                    return "пики";
-                case 2:
-                    return "трефы";
-                case 3:
-                    return "бубны";
-                case 4:
-                    return "червы";
-                default:
-                    return "неправильная цифра";
+                res = true;
             }
+            else
+            {
+                res = false;
+            }
+
+            return res;
         }
     }
 }

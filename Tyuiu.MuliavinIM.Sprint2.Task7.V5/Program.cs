@@ -1,4 +1,5 @@
-﻿using Tyuiu.MuliavinIM.Sprint2.Task7.V5.Lib;
+﻿using System;
+using Tyuiu.MuliavinIM.Sprint2.Task7.V5.Lib;
 
 namespace Tyuiu.MuliavinIM.Sprint2.Task7.V5
 {
@@ -12,8 +13,8 @@ namespace Tyuiu.MuliavinIM.Sprint2.Task7.V5
             Console.WriteLine("* Спринт #2                                                               *");
             Console.WriteLine("* Тема: Добавление к решению итоговых проектов по спринту                 *");
             Console.WriteLine("* Задание #7                                                              *");
-            Console.WriteLine("* Вариант #5                                                             *");
-            Console.WriteLine("* Выполнил: Мулявин Иван Михайлович |  ИСТНб-25-1                         *");
+            Console.WriteLine("* Вариант #5                                                              *");
+            Console.WriteLine("* Выполнил: Мулявин Иван Михайлович | ИСТНб-25-1                          *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
             Console.WriteLine("* Написать программу на C#, которая запрашивает исходные данные           *");
@@ -24,10 +25,10 @@ namespace Tyuiu.MuliavinIM.Sprint2.Task7.V5
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
-            Console.WriteLine("Введите значение переменной Х: ");
+            Console.Write("Введите значение переменной X: ");
             double x = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine("Введите значение переменной Y: ");
+            Console.Write("Введите значение переменной Y: ");
             double y = Convert.ToDouble(Console.ReadLine());
 
             DataService ds = new DataService();
@@ -45,6 +46,7 @@ namespace Tyuiu.MuliavinIM.Sprint2.Task7.V5
             {
                 Console.WriteLine("Точка не находится в заштрихованной области");
             }
+
             Console.ReadKey();
         }
     }
